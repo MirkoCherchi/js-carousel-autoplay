@@ -81,10 +81,8 @@ prev.addEventListener('click', function(){
 })
 
 
-// Aggiunta della funzionalità di autoplay senza modificare il codice esistente
 let autoplayStart = 3000;
 let autoplay;
-startAutoplay();
 
 function startAutoplay() {
     autoplay = setInterval(() => {
@@ -96,6 +94,12 @@ function stopAutoplay() {
     clearInterval(autoplay);
 }
 
+
+const bottoneStart = document.querySelector('.btn-start');
+const bottoneStop = document.querySelector('.btn-stop');
+
+bottoneStart.addEventListener('click', startAutoplay);
+bottoneStop.addEventListener('click', stopAutoplay);
 
 
 
